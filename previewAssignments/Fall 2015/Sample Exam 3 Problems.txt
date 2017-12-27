@@ -1,0 +1,17 @@
+
+Sample exam 3 problems:
+
+1. For which of the following protection problems is(are)
+ the use of
+UNIX rwx protection bits appropriate.  Justify your answer.
+
+(a) Linda and Mary want to share some secret files.
+
+(b) Henry wants his files readable by everyone except Jennifer.
+
+(c) Lucy wants some of her files to be public.
+
+2. List four types of directory structures.
+
+3. List 5 security problems.
+

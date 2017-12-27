@@ -1,0 +1,16 @@
+arrays:
+	available[1...m]: indicates the number of available resources of each type.
+		available[j] = k => resource j has k instances
+
+	max[1...n,1...m]: indicates the maximum number of instances of each resource type needed by each process. 
+		max[i,j] = k means that process i needs a maximum of k instances or resource j
+
+	allocated[1...n,1...m]: indicates the number of instances of each resource type currently allocated to each process.
+		allocated[1...n,1...m] = k means that process i is allocated k instances of resource type j
+
+	need[1...n,1...m]: indicates the remaining number of instances of each resource type needed by each process.
+		need[i,j] = k means that process i still needs k instances of resources type j to complete exeution
+		need[i,j] = max[i,j] - allocated[i,j]
+
+	request[1...n,1...m]: indicates the number of instances of each resource type currently requested by each process.
+		request[i,j] = k means that process i currently requests k instances of resource type j to continue execution

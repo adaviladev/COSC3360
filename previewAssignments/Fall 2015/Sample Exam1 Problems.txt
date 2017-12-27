@@ -1,0 +1,129 @@
+
+COSC 4330: Operating Systems
+Exam #1  Sample
+11:30am-1:00pm, February 27, 2001
+Student Name:
+Social Security Number:
+
+
+Consider the following code for multiplying matrices A and B:
+
+for i := 1 to n do
+   for j := 1 to n do
+   begin
+      C[i,j] := 0;
+      for k := 1 to n do
+         C[i,j] := C[i,j] + A[i,k] * B[k,j]
+   end;
+
+Suppose n = 2.  Rewrite the code with "cobegin" and "coend"
+(which allow parallel/concurrent operations)
+to minimize the number of sequential operations.
+
+
+(10 points)
+In class, we discussed a simple buffer allocation problem with
+semaphores.
+Here, we have circular buffers of size n.
+The buffers are numbered from 0 to n-1, so the buffer following
+buffer n-1 is 0.
+Solve the following synchronization problem with semaphores and
+wait/signal operations.
+There are two processes: producer (repeatedly writes to buffers,
+one at a time)
+and consumer (repeatedly reads from buffers, one at a time).
+Initially the buffers are empty.
+Reading and writing start from buffer 0, then 1,2,...,n-1,0,1...
+Reading a buffer makes it empty.
+The consumer cannot read an empty buffer.
+The producer cannot write to an occupied buffer.
+
+
+(10 points) Draw the state diagram for a process, and
+label the states and transitions.
+
+
+(15 points)
+In class, you learned about earliest-deadline-first (ED) scheduling.
+There is another real-time scheduling strategy called least-laxity-first
+(LL), which schedules the process with the smallest laxity first.
+Laxity = deadline - computation time.
+Is LL better, same, or worse than ED in terms of its ability to
+meet processes' deadlines?
+Justify your answer.
+If ED and LL perform equally well,
+show that you can always change a ED-schedule
+(meeting all deadlines) to a LL-schedule,
+and vice versa.
+Otherwise, show that one scheduler can meet deadlines of a set of
+processes but the other cannot.
+
+
+(20 points) Consider the following set of processes,
+with the length of the CPU-burst time given in milliseconds:
+
+
+
+    Process   Computation (Burst) Time   Deadline    Priority
+       p0                14                 20           2
+       p1                 3                 10           5
+       p2                 6                 25           4
+       p3                 1                  5           3
+       p4                 8                 15           1 (highest)
+
+
+
+
+The processes are assumed to have arrived in the order p0, p1, p2, p3, p4,
+all at time 0.
+
+(a) Draw five Gantt charts illustrating the execution of these processes
+using FCFS, ED, SPF, a nonpreemptive priority (a smaller priority number
+implies higher priority), and RR (quantum = 1) scheduling.
+
+(b) What is the turnaround time of each process for each of the
+scheduling algorithms in part a?
+
+(c) What is the waiting time of each process for each of the scheduling
+algorithms in part a?
+
+(d) Which of the schedules in part a results in the minimal waiting time
+(over all processes)?
+
+
+
+
+
+(10 points) Consider the following program segments for two different
+processes executing concurrently,
+where A and B are not shared variables, but X starts at zero and is a
+shared variable.
+
+
+     process 1:
+     for a := 1 to 5 do
+          x := x + 2;
+
+     process 2:
+     for b := 1 to 5 do
+          x := x + 2;
+
+If these two processes execute only once at any speed,
+what are the possible resulting values of x?
+Explain your answers.
+
+
+
+(10 points)
+Suppose you cannot use any loop constructs (such as for, do, while, etc).
+You may use "if, else". 
+Write a C program using fork()
+to print the first 10 even numbers, starting with 0.
+These numbers do not have to be printed in order.
+Each process can either print nothing or only one number.
+You cannot (and do not need to) use Unix semaphores.
+
+
+
+
+

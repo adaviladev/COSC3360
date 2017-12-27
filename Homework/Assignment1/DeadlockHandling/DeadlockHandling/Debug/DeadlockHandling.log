@@ -1,0 +1,13 @@
+﻿Build started 10/1/2016 5:57:46 PM.
+     1>Project "C:\Users\hackeysack09\Google Drive\COSC3360\Homework\Assignment1\DeadlockHandling\DeadlockHandling\DeadlockHandling.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt os_hw1_adrian_davila.cpp Process.cpp
+         Process.cpp
+         os_hw1_adrian_davila.cpp
+     1>c:\users\hackeysack09\google drive\cosc3360\homework\assignment1\deadlockhandling\deadlockhandling\os_hw1_adrian_davila.cpp(6): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "C:\Users\hackeysack09\Google Drive\COSC3360\Homework\Assignment1\DeadlockHandling\DeadlockHandling\DeadlockHandling.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.92

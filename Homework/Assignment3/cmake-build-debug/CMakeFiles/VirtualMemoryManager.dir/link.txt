@@ -1,0 +1,1 @@
+/usr/bin/c++.exe   -std=c++11 -g  -Wl,--enable-auto-import CMakeFiles/VirtualMemoryManager.dir/os_hw3_adrian_davila.cpp.o  -o VirtualMemoryManager.exe -Wl,--out-implib,libVirtualMemoryManager.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
